@@ -1,3 +1,2 @@
 #!/bin/bash
-myArray=("Applications" " Documents" "Dropbox" "Movies" "Pictures" "Desktop" "Downloads"  "Library" "Music" "Public")
-echo $(echo "${myArray[@]}")
+echo "Applications" " Documents" "Dropbox" "Movies" "Pictures" "Desktop" "Downloads"  "Library" "Music" "Public"
