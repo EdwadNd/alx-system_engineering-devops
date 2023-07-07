@@ -5,5 +5,6 @@
 
 apt-get update
 apt-get -y install nginx
-sed -i "/server_name _;/a add_header X-Served-By '$HOSTNAME';" /etc/nginx/sites-available/default
-service nginx restart
+
+sed -i "/http {/ a\ add_header X-Served-By \$hostname;" /etc/nginx/nginx.conf
+nginx -s reload
