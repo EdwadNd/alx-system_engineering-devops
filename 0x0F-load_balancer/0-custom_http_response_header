@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Configures a new Ubuntu web-02 machine.
+# Installs Nginx with the following configurations.
+# Listens on port 80.
+
+apt-get update
+apt-get -y install nginx
+
+sed -i "/http {/ a\ add_header X-Served-By \$hostname;" /etc/nginx/nginx.conf
+nginx -s reload
